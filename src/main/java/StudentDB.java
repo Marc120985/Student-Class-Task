@@ -14,7 +14,8 @@ public class StudentDB {
         String result = "";
         for(Student singleStundent : students){
             result += "Name: " + singleStundent.name + "\nID: " + singleStundent.id + "\n";
-        }return result;
+        }
+        return result;
     }
 
     public Student randomStudent(){
