@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.NoSuchElementException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
@@ -55,3 +53,19 @@ class MainTest {
         }
     }
 }
+
+    @Test
+    public void getAllStudentsTestEmptyArray () {
+        //GIVEN
+        Student student1 = new Student("Test", 123);
+        Student[] students = {};
+        StudentDB studentData = new StudentDB(students);
+
+        //WHEN
+        Student[] actual = studentData.getAllStudents();
+
+        //THEN
+        Student[] expected = {student1};
+        assertArrayEquals(actual, expected);
+    }
+    }
