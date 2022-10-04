@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class Main {
     public static void main(String[] args) {
         Student student = new Student("Asem", 1234567);
@@ -10,7 +12,14 @@ public class Main {
         StudentDB studentData = new StudentDB(students);
         //System.out.println(studentData);
         //System.out.println(studentData.getAllStudents());
-        System.out.println(studentData.randomStudent());
+        //System.out.println(studentData.randomStudent());
+
+        //studentData.findById(876543321);
+        try{
+        System.out.println(studentData.findById(6477435));}
+        catch (NoSuchElementException e){
+            System.out.println("Es wurde keine ID gefunden");
+        }
 
     }
 }

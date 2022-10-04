@@ -3,7 +3,7 @@ import lombok.Data;
 @Data
 public class Student {
     String name;
-    int id;
+      int id;
 
     public Student(String name, int id){
         this.name = name;
