@@ -16,4 +16,10 @@ public class StudentDB {
             result += "Name: " + singleStundent.name + "\nID: " + singleStundent.id + "\n";
         }return result;
     }
+
+    public Student randomStudent(){
+        int randomIndex = (int)(Math.random() * students.length);
+        System.out.println(randomIndex);
+        return students[randomIndex];
+    }
 }
