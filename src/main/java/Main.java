@@ -7,8 +7,8 @@ public class Main {
         Student[] students = {student, student2};
         //System.out.println(students[1])
         StudentDB studentData = new StudentDB(students);
-        //System.out.println(studentData);
-        System.out.println(studentData.getAllStudents());
+        System.out.println(studentData);
+        //System.out.println(studentData.getAllStudents());
 
     }
 }

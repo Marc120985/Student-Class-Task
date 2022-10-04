@@ -10,4 +10,10 @@ public class StudentDB {
     public Student[] getAllStudents(){
         return students;
     }
+    public String toString(){
+        String result = "";
+        for(Student singleStundent : students){
+            result += "Name: " + singleStundent.name + "\nID: " + singleStundent.id + "\n";
+        }return result;
+    }
 }
