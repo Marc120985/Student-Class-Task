@@ -23,4 +23,16 @@ public class StudentDB {
         System.out.println(randomIndex);
         return students[randomIndex];
     }
-}
+
+    public Student findById (int id) throws RuntimeException{
+
+        for (Student singleStudent : students) {
+            if (singleStudent.id == id) {
+                return singleStudent;
+            }
+
+        }
+        throw new RuntimeException("Kein Student mit der gesuchten ID vorhanden.");
+        }
+    }
+

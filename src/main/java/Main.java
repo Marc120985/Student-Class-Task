@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student("Asem", 1234567);
+        Student student = new Student("Asem", 1);
         //System.out.println(student.name);
-        Student student2 = new Student("Christian", 876543321);
-        Student student3 = new Student("Marc", 64727435);
+        Student student2 = new Student("Christian", 2);
+        Student student3 = new Student("Marc", 3);
 
         Student[] students = {student, student2, student3};
         //System.out.println(students[1])
