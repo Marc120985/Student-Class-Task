@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.NoSuchElementException;
 
 public class Main {
@@ -13,10 +14,24 @@ public class Main {
         students.add(student);
         students.add(student2);
         students.add(student3);
-        System.out.println(students);
-        System.out.println(students.get(1));
+//        System.out.println(students);
+//        System.out.println(students.get(1));
 
-        StudentDB studentDB = new StudentDB(students);
+
+        HashMap<String, Student> hashStudents = new HashMap<>();
+        hashStudents.put("001",student);
+        hashStudents.put("002",student2);
+        hashStudents.put("003", student3);
+
+        System.out.println(hashStudents.get("001"));
+        System.out.println(hashStudents.get("002"));
+        System.out.println(hashStudents);
+
+
+        //StudentDB studentDB = new StudentDB(students);
+        StudentDB studentDBHash = new StudentDB(hashStudents);
+
+        System.out.println();
         //Student[] students = {student, student2, student3};
         //System.out.println(students[1])
         //StudentDB studentData = new StudentDB(students);
