@@ -38,7 +38,7 @@ public class StudentDB {
     }
 }
 
-    public Student findById (int id) throws RuntimeException{
+    /*public Student findById (int id) throws RuntimeException{
 
         for (Student singleStudent : students) {
             if (singleStudent.id == id) {
@@ -48,5 +48,6 @@ public class StudentDB {
         }
         throw new RuntimeException("Kein Student mit der gesuchten ID vorhanden.");
         }
-    }
+
+    }*/
 
