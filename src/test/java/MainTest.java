@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,15 +10,17 @@ class MainTest {
     public void getAllStudentsTest () {
         //GIVEN
         Student student1 = new Student("Test", 123);
-        Student[] students = {student1};
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(student1);
         StudentDB studentData = new StudentDB(students);
 
         //WHEN
-        Student[] actual = studentData.getAllStudents();
+        ArrayList<Student> actual = studentData.getAllStudents();
 
         //THEN
-        Student[] expected = {student1};
-        assertArrayEquals(actual, expected);
+        ArrayList<Student> expected = new ArrayList<>();
+        expected.add(student1);
+        assertEquals(actual, expected);
     }
     @Test
     public void excistingID() throws Exception {

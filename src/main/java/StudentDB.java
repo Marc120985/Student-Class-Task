@@ -1,15 +1,16 @@
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
 @Data
 public class StudentDB {
-    Student[] students;
+    ArrayList<Student> students;
 
-    public StudentDB(Student[] students) {
+    public StudentDB(ArrayList<Student> students) {
         this.students = students;
     }
-    public Student[] getAllStudents(){
+    public ArrayList<Student> getAllStudents(){
         return students;
     }
     public String toString(){
@@ -21,17 +22,17 @@ public class StudentDB {
     }
 
     public Student randomStudent(){
-        int randomIndex = (int)(Math.random() * students.length);
+        int randomIndex = (int)(Math.random() * students.size());
         System.out.println(randomIndex);
-        return students[randomIndex];
+        return students.get(randomIndex);
     }
 
     public Student findById(int id){
         Student resultStudent = null;
-        for(int i=0; i<students.length; i++){
-            if(students[i].getId() == id){
+        for(int i=0; i<students.size(); i++){
+            if(students.get(i).getId() == id){
                //resultStudent = students[i];
-               return students[i];
+               return students.get(i);
             }
         }
         throw new NoSuchElementException("Kein Student gefunden under der ID: " + id);
