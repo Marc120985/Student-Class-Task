@@ -20,6 +20,7 @@ public class Main {
         System.out.println(hansMueller);
         hansMueller.chooseCourse("Computer Networks II");
         System.out.println(hansMueller);
+        hansMueller.sayHello("Hi, ich bin Hans");
 
     }
 }

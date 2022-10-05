@@ -1,6 +1,6 @@
 import lombok.Data;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
@@ -35,13 +35,10 @@ public class StudentDB {
     }
 
     public Student findById(int id){
-        Student resultStudent = null;
-        for(int i=0; i<students.size(); i++){
-            if(students.get(i).getId() == id){
-               //resultStudent = students[i];
-               return students.get(i);
+            if(students.containsKey(id)){
+               return students.get(id);
             }
-        }
+
         throw new NoSuchElementException("Kein Student gefunden under der ID: " + id);
     }
 }

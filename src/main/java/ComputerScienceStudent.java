@@ -21,4 +21,8 @@ public class ComputerScienceStudent extends Student {
     public void chooseCourse(String newCourse) {
         super.courses.add(newCourse);
     }
+
+    public void sayHello(String message) {
+        System.out.println(message);
+    }
 }
