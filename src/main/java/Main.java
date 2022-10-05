@@ -17,10 +17,17 @@ public class Main {
 
         ComputerScienceStudent hansMueller = new ComputerScienceStudent("Hans Müller",34264,
                 new ArrayList<>(List.of("Computer Science I", "Algebra I")), "Philosophy");
+
         System.out.println(hansMueller);
         hansMueller.chooseCourse("Computer Networks II");
         System.out.println(hansMueller);
         hansMueller.sayHello("Hi, ich bin Hans");
+        System.out.println(hansMueller.getIdentityCardNumber());
+
+        BiologyStudent peterSchmitz = new BiologyStudent("Peter Schmitz",35264,
+                new ArrayList<>(List.of("Mikrobiologie I", "Algebra I")), "Informatik");
+
+        System.out.println(peterSchmitz);
 
     }
 }

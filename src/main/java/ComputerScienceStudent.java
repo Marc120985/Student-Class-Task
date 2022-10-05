@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 
-public class ComputerScienceStudent extends Student {
+public class ComputerScienceStudent extends Student implements Citizen  {
     String mainSubject = "Computer Science";
     String secondSubject;
 
@@ -24,5 +24,13 @@ public class ComputerScienceStudent extends Student {
 
     public void sayHello(String message) {
         System.out.println(message);
+    }
+
+    public String getAdress() {
+        return "Adresse: xyz";
+    }
+
+    public int getIdentityCardNumber() {
+        return 123;
     }
 }
