@@ -1,20 +1,20 @@
-import lombok.Data;
+import java.util.ArrayList;
 
-@Data
-public class Student {
-    String name;
-      int id;
 
-    public Student(String name, int id){
-        this.name = name;
+public abstract class Student extends Person {
+
+    int id;
+    ArrayList<String> courses = new ArrayList<>();
+
+    public Student(String name, int id, ArrayList<String> courses) {
+        super(name);
+        this.id = id;
+        this.courses = courses;
+    }
+    public Student(String name, int id) {
+        super(name);
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "" +
-                "Name: '" + name + '\'' +
-                "Studentennummer: " + id + "\n"
-                ;
-    }
+    public abstract void chooseCourse(String newCourse);
 }
